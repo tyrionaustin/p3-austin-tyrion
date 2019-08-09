@@ -4,10 +4,56 @@
   padding: 0;
 }
 
+html {
+  font-family: 'Give You Glory', cursive;
+}
+
+header {
+  font-family: 'Give You Glory', cursive;
+  text-align: center;
+}
+
+p {
+  font-family: 'Give You Glory', cursive;
+  max-width: 300px;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  text-align: center;
+}
+
 .col {
   max-width: 300px;
   height: 300px;
   width: 100%;
   border: solid 2px black;
   text-align: center;
+}
+
+#box1{
+  background-color: #4D69B1;
+}
+
+#box2{
+  background-color: #D5AF34;
+}
+
+#box3{
+  background-color: #C0C0C0;
+}
+
+#box4{
+  background-color: #ED1C24;
+}
+
+.new-color {
+  background-color: #FFFFFF;
+  transition: background-color 1000ms;
 }
