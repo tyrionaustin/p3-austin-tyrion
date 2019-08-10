@@ -5,6 +5,8 @@
 }
 
 html {
+  background-image: url('images/crystalball.jpg');
+  background-size: cover;
   font-family: 'Give You Glory', cursive;
 }
 
@@ -51,6 +53,14 @@ p {
 
 #box4{
   background-color: #ED1C24;
+}
+
+#numbers {
+  display: none;
+}
+
+#numbers2 {
+  display: none;
 }
 
 .new-color {
