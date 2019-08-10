@@ -5,12 +5,16 @@
 }
 
 html {
-  background-image: image('img/crystalball.jpg');
   font-family: 'Give You Glory', cursive;
 }
 
 body {
-  background-image: image('img/crystal.png');
+  background-image: url('../img/fortune.jpg');
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: auto;
+
 }
 
 header {
@@ -23,17 +27,32 @@ h2 {
   text-align: center;
 }
 
-.container p {
+.container-fluid {
+  width: 100%;
+}
+
+.container-fluid p {
   font-family: 'Give You Glory', cursive;
   max-width: 300px;
   height: 300px;
   width: 100%;
   text-align: center;
+  font-size: 2em;
+}
+
+section p {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+.fortune p {
+  font-size: 2em;
 }
 
 p {
   font-family: 'Give You Glory', cursive;
   text-align: center;
+
 }
 
 
