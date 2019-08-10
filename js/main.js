@@ -44,35 +44,62 @@ function loop2() {
 // Event listener for second loop
 for (let i = 0; i < theBoxes.length; i++) {
   theBoxes[i].addEventListener('click', loop2);
+
+  theBoxes[i].addEventListener("click", changeLayer);
 };
 
 //Change second fortune teller to third
 
 function changeLayer() {
 
-	const currentLayer = this.parentElement[1];			// Determine current layer
-	const nextLayer = currentLayer.nextElementSibling;	// Determine next layer to show
+	const currentLayer = document.getElementById('numbers');			// Determine current layer
+	const nextLayer = document.getElementById('numbers2');	// Determine next layer to show
 	let count;											// Set empty count variable
 
 	// Add hide class to current layer and remove from next layer
 	const swap = () => {
-		teller2.css("none");
-		teller3.css("block");
+    currentLayer.classList.add("hide");
+    nextLayer.classList.remove("hide");
 	}  // End swap function
 
-	// Check to see if current layer is layer 1 or layer 2 to accurately set count value
-	if (currentLayer === teller2) {
-		count = this.getElementsByClassName("row")[1].alt.length;		// If layer1, set count value to image alt attribute
-	} else {
-		count = Number(this.textContent);							// Else, set count value to square's text content
-	}  // End if/else
+  // Check to see if current layer is layer 1 or layer 2 to accurately set count value
+  if (currentLayer === teller2) {
+    count = Number(this.textContent);		// If layer1, set count value to image alt attribute
+  } else {
+    count = Number(this.textContent);							// Else, set count value to square's text content
+  }  // End if/else
 
 	// Set timeout to swap layers
 	setTimeout(swap, count * 2 * 1000);
 }  // End changeLayer() function
 
 
+let yourFortune = document.createElement('p');
+let fortuneWrapper = document.getElementById('fortunes');
+fortuneWrapper.appendChild(yourFortune);
 
-function showFortune() {
-  const
+let placeholderText = document.createTextNode('');
+yourFortune.appendChild(placeholderText);
+
+let fortunes = [
+  'A faithful friend is a strong defense',
+  'A friend is a present you give yourself',
+  'A good friendship is often more important than a passionate romance',
+  'A good time to finish up old tasks',
+  'A lifetime of happiness lies ahead of you',
+  'A pleasant surprise is waiting for you',
+  'Accept something that you can not change, and you will feel better',
+  'Advice, when most needed, is least heeded',
+  'All your hard work will soon pay off',
+  'An inch of time is an inch of gold'
+];
+
+let showFortune = function() {
+  fortunes.sort(function(a, b){return 0.5 - Math.random()});
+  let fortuneFiller = document.createTextNode(fortunes[0]);
+  yourFortune.appendChild(fortuneFiller);
+};
+
+for (let i = 0; i < Boxes.length; i++) {
+  Boxes[i].addEventListener("click", showFortune);
 }
