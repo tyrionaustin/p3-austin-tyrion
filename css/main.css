@@ -18,13 +18,24 @@ header {
   text-align: center;
 }
 
-p {
+h2 {
+  font-family: 'Give You Glory', cursive;
+  text-align: center;
+}
+
+.container p {
   font-family: 'Give You Glory', cursive;
   max-width: 300px;
   height: 300px;
   width: 100%;
   text-align: center;
 }
+
+p {
+  font-family: 'Give You Glory', cursive;
+  text-align: center;
+}
+
 
 .container {
   margin: 0 auto;
@@ -60,6 +71,10 @@ p {
 
 #numbers {
   display: none;
+}
+
+.box3 {
+  color: white;
 }
 
 .hide {

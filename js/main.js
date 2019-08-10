@@ -22,6 +22,7 @@ for (let i = 0; i < myBoxes.length; i++) {
   myBoxes[i].addEventListener('click', loopThrough);
 };
 
+//Hide first fortune teller, show second after 14 seconds(longest length)
 setTimeout(function(){
     teller1.style.display = 'none';
 }, 14000);
@@ -58,7 +59,7 @@ function changeLayer() {
 
 	// Add hide class to current layer and remove from next layer
 	const swap = () => {
-    currentLayer.classList.add("hide");
+    teller2.style.display = 'none';
     nextLayer.classList.remove("hide");
 	}  // End swap function
 
